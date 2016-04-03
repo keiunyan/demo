@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.action.extension" value=",do,action" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	
+	<package name="default" namespace="/" extends="struts-default">
+
+		<action name="Main" class="com.yxs.demo.action.UserAction" method="loginValidate" >
+			<result name="success">/WEB-INF/jsp/index.jsp</result>
+			<result name="fail">login.jsp</result>
+		</action>
+		
+    <action name="logout" class="com.yxs.demo.action.UserAction" method="logout" >
+      <result name="input">login.jsp</result>
+    </action>
+		
+		<action name="vu" class="com.yxs.demo.action.UserAction" method="vu" >
+		  <result></result>
+		</action>
+    
+    <action name="chpwd*" class="com.yxs.demo.action.UserAction" method="{1}" >
+      <result name="input">/WEB-INF/jsp/chpwd.jsp</result>
+    </action>
+    		
+	</package>
+  
+  <package name="admin" namespace="/admin" extends="struts-default">
+  
+  </package>
+   
+  <package name="view" namespace="/view" extends="struts-default">
+  
+  </package>
+  
+  <package name="test" namespace="/test" extends="struts-default">
+    <action name="Test" class="com.yxs.demo.action.TestAction" >
+      <result name="input">/WEB-INF/jsp/test.jsp</result>
+    </action>
+  </package>
+  
+</struts>
