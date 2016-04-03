@@ -27,7 +27,7 @@ public class CharacterEncodingFilter implements Filter {
 			FilterChain chain) throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		if(null != encoding){
-			logger.info("encoding = [{}]",encoding);
+			//logger.info("encoding = [{}]",encoding);
 			request.setCharacterEncoding(encoding);
 			response.setCharacterEncoding(encoding);
 			
