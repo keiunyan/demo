@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC   
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+        
+<hibernate-mapping>  
+    <!--生成默认为user的数据库表-->  
+    <class name="com.yxs.demo.entity.UserEntity" table="user" 
+      dynamic-insert="true" dynamic-update="true">
+        <id name="id">  
+            <!-- 算法的核心思想是结合机器的网卡、当地时间、一个随机数来生成GUID -->  
+            <generator class="uuid"></generator>  
+        </id>  
+        <property name="name"></property>  
+        <property name="age"></property>  
+        <property name="hasChild"></property>  
+    </class>      
+</hibernate-mapping>

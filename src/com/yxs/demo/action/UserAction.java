@@ -8,6 +8,9 @@ import java.io.PrintWriter;
 
 import org.apache.struts2.ServletActionContext;
 
+import com.yxs.demo.dao.UserDao;
+import com.yxs.demo.entity.UserEntity;
+
 /**
  * @author YXS
  *
@@ -99,7 +102,7 @@ public class UserAction extends BaseAction {
 		}
 
 	}
-	
+
 	public String getUserId() {
 		return userId;
 	}
