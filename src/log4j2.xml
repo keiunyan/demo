@@ -8,6 +8,8 @@
     <Loggers>
         <Logger name="com.opensymphony.xwork2" level="warn"/>
         <Logger name="org.apache.struts2" level="warn"/>
+        <Logger name="org.hibernate" level="warn"/>
+
         <Logger name="com.yxs.demo.action.UserAction" level="debug"/>
         <Root level="debug">
             <AppenderRef ref="STDOUT"/>
