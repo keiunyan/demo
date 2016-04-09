@@ -38,9 +38,11 @@ public class UserEntity {
 		this.hasChild = hasChild;
 	}
 	
+	@Override
 	public String toString(){
 		return this.name+" : "+this.age+" : "+this.hasChild;
 	}
+	
 	public String getId() {
 		return id;
 	}
