@@ -5,7 +5,7 @@
         
 <hibernate-mapping>  
     <!--生成默认为user的数据库表-->  
-    <class name="com.yxs.demo.entity.UserEntity" table="user" 
+    <class name="com.yxs.demo.entity.UserEntity" table="demo" 
       dynamic-insert="true" dynamic-update="true">
         <id name="id">  
             <!-- 算法的核心思想是结合机器的网卡、当地时间、一个随机数来生成GUID -->  

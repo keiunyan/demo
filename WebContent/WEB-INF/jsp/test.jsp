@@ -94,7 +94,7 @@
       });
       
       $('#ok3').click(function(){
-          $.post("test/Test_add",{"user":'{"name":"张三","age":456,"hasChild":true}'},function(data){
+          $.post("test/Test_add",{"user":'{"name":"张{三}","age":22,"hasChild":"1"}'},function(data){
               $("div span#info1").html(
                       "code: "+data.code+"<br/>"+
                       " msg: "+data.msg+"<br/>"+
