@@ -7,6 +7,7 @@ public class UserEntity {
 		this.age      = 0;
 		this.hasChild = false;		
 	}
+	
 	public UserEntity(String name, int age, boolean hasChild){
 		this.name     = name;
 		this.age      = age;
